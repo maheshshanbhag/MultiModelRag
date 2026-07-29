@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+backend/.venv/
+
+# Environment files
+.env
+.env.*
+
+# Node / frontend
+node_modules/
+dist/
+frontend/frontend/node_modules/
+frontend/frontend/dist/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated app data and artifacts
+backend/uploads/
+backend/vector_db/
+backend/model/
+backend/data/chunks/
+backend/data/figures/
+backend/eval/**/results.json

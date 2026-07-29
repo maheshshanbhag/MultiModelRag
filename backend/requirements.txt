@@ -1,0 +1,47 @@
+# requirements.txt — top-level dependencies only.
+# pip auto-installs the ~140 transitive deps (deps of these), so this stays short.
+# Install everything in one shot:
+#     pip install -r requirements.txt
+#
+# torch/torchvision come from the CUDA index below. If the mentor's machine has a
+# different CUDA (or no GPU), change the index + versions:
+#   other CUDA : https://download.pytorch.org/whl/cu121 (or cu124/cu128) + matching versions
+#   CPU only   : https://download.pytorch.org/whl/cpu  + torch==2.12.1 torchvision==0.27.1
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+# --- deep learning: pin the CUDA build (must be listed, or docling's torchvision
+#     dependency will silently pull a CPU torch from PyPI) ---
+torch==2.12.1+cu126
+torchvision==0.27.1+cu126
+
+# --- embeddings / reranker ---
+sentence-transformers==5.6.0
+transformers==5.13.0
+numpy==2.4.6
+tqdm==4.68.4
+Pillow==12.3.0
+
+# --- vector store + sparse retrieval ---
+chromadb==1.5.9
+rank-bm25==0.2.2
+
+# --- document ingestion. OCR = the SYSTEM Tesseract binary (see SETUP.md):
+#     TesseractCliOcrOptions shells out to the `tesseract` CLI, so no OCR Python
+#     package is pinned here.
+#     NOTE: docling==2.111.0 -> docling-slim[standard] pulls the `rapidocr` package
+#     transitively, but it is DORMANT — imported only if the RapidOCR *engine* is
+#     selected (it isn't; we use Tesseract), so it never runs and download_models.py
+#     fetches NO RapidOCR/PaddleOCR (Chinese) models. To drop the unused package too:
+#         pip uninstall -y rapidocr
+#     Optional alternative engine (DOCLING_OCR_ENGINE=easyocr):  pip install easyocr
+docling==2.111.0
+pypdfium2==5.11.0
+
+# --- API server ---
+fastapi==0.139.0
+uvicorn==0.51.0
+python-multipart==0.0.32
+
+# --- LLM client + model downloader ---
+requests==2.34.2
+huggingface_hub==1.23.0

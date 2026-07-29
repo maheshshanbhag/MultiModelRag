@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* thin, dark scrollbars everywhere */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #242a38;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #323a4b;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.dot-pulse {
+  animation: pulseDot 1.4s ease-in-out infinite;
+}
+
+@keyframes caretBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.caret::after {
+  content: "▍";
+  animation: caretBlink 1s step-start infinite;
+  color: #4c6ef5;
+}
+
+/* ---- Markdown answer rendering (Tailwind preflight strips these) ---- */
+.md {
+  color: #eef0f4;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+.md > :first-child {
+  margin-top: 0;
+}
+.md > :last-child {
+  margin-bottom: 0;
+}
+.md p {
+  margin: 0.5rem 0;
+}
+.md h1,
+.md h2,
+.md h3,
+.md h4 {
+  font-weight: 600;
+  color: #eef0f4;
+  line-height: 1.3;
+  margin: 1rem 0 0.5rem;
+}
+.md h1 {
+  font-size: 1.15rem;
+}
+.md h2 {
+  font-size: 1.05rem;
+}
+.md h3 {
+  font-size: 0.98rem;
+}
+.md h4 {
+  font-size: 0.92rem;
+}
+.md ul,
+.md ol {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+}
+.md ul {
+  list-style: disc;
+}
+.md ol {
+  list-style: decimal;
+}
+.md li {
+  margin: 0.25rem 0;
+}
+.md li::marker {
+  color: #8b93a7;
+}
+.md strong {
+  font-weight: 600;
+  color: #eef0f4;
+}
+.md em {
+  font-style: italic;
+}
+.md a {
+  color: #6d8bff;
+  text-decoration: underline;
+}
+.md code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.85em;
+  background: #0a0c11;
+  border: 1px solid #242a38;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+.md pre {
+  background: #0a0c11;
+  border: 1px solid #242a38;
+  border-radius: 8px;
+  padding: 0.75rem;
+  overflow-x: auto;
+  margin: 0.6rem 0;
+}
+.md pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+}
+.md blockquote {
+  border-left: 3px solid #323a4b;
+  padding-left: 0.75rem;
+  color: #c7cbd6;
+  margin: 0.5rem 0;
+}
+.md hr {
+  border: none;
+  border-top: 1px solid #242a38;
+  margin: 0.75rem 0;
+}
+
+/* tables — scroll horizontally instead of breaking the bubble */
+.md-tablewrap {
+  overflow-x: auto;
+  margin: 0.6rem 0;
+  max-width: 100%;
+}
+.md-tablewrap table {
+  border-collapse: collapse;
+  width: max-content;
+  max-width: none;
+  font-size: 0.85rem;
+  margin: 0;
+}
+.md-tablewrap th,
+.md-tablewrap td {
+  border: 1px solid #242a38;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.md-tablewrap th {
+  background: #141822;
+  color: #eef0f4;
+  font-weight: 600;
+}
+.md-tablewrap td {
+  color: #c7cbd6;
+}

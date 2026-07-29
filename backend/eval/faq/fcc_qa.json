@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What is the ideal reactor temperature for an FCC unit? What happens if it goes beyond the normal range?",
+    "answer": "The reactor riser outlet temperature typically operates between 500–550°C (930–1020°F), depending on feed quality and product objectives. Lower temperatures reduce conversion and gasoline yield, while excessively high temperatures increase dry gas and coke formation, accelerate catalyst deactivation, and may damage equipment. Operators continuously balance reactor temperature with catalyst circulation and feed quality."
+  },
+  {
+    "question": "Why do we maintain the regenerator at such a high temperature? Isn't it harmful to the catalyst?",
+    "answer": "The regenerator normally operates around 650–730°C (1200–1350°F) to completely burn coke deposited on the catalyst. Although the catalyst is designed for these temperatures, excessive temperatures can permanently reduce catalyst activity through hydrothermal deactivation. Therefore, air flow, coke burn rate, and catalyst circulation are carefully controlled."
+  },
+  {
+    "question": "How do operators know when fresh catalyst needs to be added?",
+    "answer": "Fresh catalyst is not added on a fixed schedule. Operators monitor catalyst activity, equilibrium catalyst properties, conversion, coke yield, metals contamination (nickel and vanadium), and product yields. When catalyst activity declines or contaminants accumulate, fresh catalyst is added while spent equilibrium catalyst is withdrawn to maintain overall performance."
+  },
+  {
+    "question": "Why do we continuously circulate catalyst instead of keeping it stationary inside the reactor?",
+    "answer": "The circulating catalyst performs two important functions: It provides active catalytic sites for cracking reactions. It transfers heat from the regenerator to the reactor. Without continuous circulation, the reactor would not receive sufficient heat for cracking, and coke would rapidly deactivate the catalyst."
+  },
+  {
+    "question": "What determines whether the FCC should operate in full combustion or partial combustion mode?",
+    "answer": "The choice mainly depends on feed quality and heat balance. Clean gas oils generally operate in full combustion because coke production is lower. Heavy residue feeds produce more coke, making partial combustion or heat-removal systems more suitable to prevent excessive regenerator temperatures while maintaining catalyst activity."
+  },
+  {
+    "question": "Why is pressure maintained higher in the reactor than in the fractionator?",
+    "answer": "A pressure difference is necessary to ensure continuous flow of cracked vapors from the reactor into the main fractionator without backflow. Reactor pressure is generally maintained around 1.5–3 bar(g), while downstream equipment operates at progressively lower pressures to facilitate vapor movement and product separation."
+  },
+  {
+    "question": "What happens if the wet gas compressor trips unexpectedly?",
+    "answer": "A wet gas compressor trip is considered a major upset because cracked gases can no longer be processed. Operators typically reduce or stop feed, maintain catalyst circulation, stabilize reactor pressure, and follow emergency shutdown procedures to prevent pressure build-up and equipment damage until the compressor is restored."
+  },
+  {
+    "question": "Why do we inject wash water into the FCC gas plant?",
+    "answer": "Wash water removes corrosive compounds such as hydrogen sulfide (H₂S), ammonia (NH₃), and hydrogen cyanide (HCN) from process streams. Without proper water washing, these contaminants can cause severe corrosion, fouling, hydrogen blistering, and stress corrosion cracking in downstream equipment."
+  },
+  {
+    "question": "Why doesn't the FCC produce only gasoline? Why are products like LPG, LCO, slurry oil, and fuel gas also formed?",
+    "answer": "Catalytic cracking produces a range of hydrocarbon molecules rather than a single product. Product distribution depends on catalyst type, feedstock properties, reactor temperature, catalyst-to-oil ratio, and residence time. The FCC is optimized to maximize refinery value rather than maximize only gasoline production."
+  },
+  {
+    "question": "During startup, why can't we immediately introduce fresh feed into the reactor?",
+    "answer": "Before introducing feed, the FCC unit must be properly heated, catalyst circulation established, the regenerator stabilized, air flow adjusted, and temperatures brought within safe operating limits. Introducing feed too early can result in poor vaporization, unstable operation, coke formation, thermal shock, and potential equipment damage."
+  },
+  {
+    "question": "What reactor temperature range should I target and what happens if it drifts high?",
+    "answer": "Target riser outlet 950–1,000°F (510–538°C). Every +18°F = +1 RON. Push too far → gasoline overcracking → dry gas spike. Regenerator dense phase ~1,309°F (709°C). Above 1,350°F (732°C) = cyclone damage + forced feed cut."
+  },
+  {
+    "question": "What slide valve ΔP do I need and what if it drops to zero? Keep ΔP above 2 psi always.",
+    "answer": "Normal: regen slide valve 5–8 psi, spent slide valve 3–6 psi. Zero ΔP = flow reversal = hydrocarbons into regenerator or air into reactor = emergency shutdown territory."
+  },
+  {
+    "question": "How do I calculate catalyst-to-oil ratio and what's normal?",
+    "answer": "Back-calculate from heat balance. Heat from coke combustion minus all heat sinks ÷ (0.285 BTU/lb·°F × ΔT) = catalyst circulation. Then C/O = circulation ÷ feed rate. Typical range 4:1 to 9:1. Handbook example on 50,000 bpd unit = 4.8."
+  },
+  {
+    "question": "How do I know if my stripper is working properly?",
+    "answer": "Check hydrogen content of coke from flue gas analysis. Healthy = 5–7 wt%. Above 7 wt% = hydrocarbons bypassing stripper and burning in regenerator instead of being recovered as product. Steam rate = 2–5 lbs per 1,000 lbs of catalyst."
+  },
+  {
+    "question": "What's the procedure for a proper material balance test run?",
+    "answer": "Before: notify all departments, calibrate meters, purge sample bombs. During: run 8–12 hours, log all temps/pressures/flows. After: convert to lb/hr → normalize to 100% → calculate coke from air rate + flue gas → adjust gasoline cut to 430°F TBP, LCO to 650°F TBP. Good closure = within ~1 wt%."
+  },
+  {
+    "question": "Standpipe catalyst density is reading ~20 lb/ft³ — is that a problem?",
+    "answer": "Yes. Normal = 35–45 lb/ft³. At 20 lb/ft³ you lose ~2 psi pressure head — directly limits catalyst circulation. Root cause is almost always aeration — too much makes it gassy and unstable, too little and it defluidizes. Also check stripper cone and ensure enough 0–40 micron fines in inventory."
+  },
+  {
+    "question": "Regenerator temperature is spiking — what's causing it and how to fix it?",
+    "answer": "Three causes: high coke yield from heavy/aromatic feed, poor stripping sending H₂-rich hydrocarbons to regenerator (hydrogen burns 3.7× hotter than carbon), or combustion mode shifting toward full burn. Fix: raise feed preheat to drop C/O, lower reactor temp, improve stripping. Hard limit = 1,350°F (732°C)."
+  },
+  {
+    "question": "How much fresh catalyst do we add and how do I know it's enough?",
+    "answer": "Handbook example: 4 tons/day on a 50,000 bpd unit. Monitor E-cat MAT — healthy ~68. If MAT trends down → increase addition rate. Main deactivation causes: hydrothermal damage in regenerator and vanadium + nickel poisoning from feed metals. Track E-cat metals weekly, don't wait for yield shifts."
+  },
+  {
+    "question": "How do I check if hydrogen blistering risk in the gas plant is under control? Maintain continuous water wash at both compressor discharge stages using steam condensate or stripped sour water. Use forward cascading — minimizes cyanide recycle. Monitor sour water NH₃/H₂S ratio — healthy = 0.5 to 1.0. Below 0.5 = cyanide attack risk rises sharply. Higher cracking severity = more HCN = more risk.",
+    "answer": ""
+  },
+  {
+    "question": "Temperature controller is fighting with the slide valve — when do I go manual?",
+    "answer": "Normal: reactor temp controller drives regen slide valve; stripper level controller drives spent slide valve. PDIC overrides both if ΔP drops below 2 psi — it always wins. If controller is hunting, go manual at 30–70% opening, let process settle, then ease back to auto. Never leave a slide valve near fully closed in auto — sudden demand can cause a temperature excursion before the valve responds."
+  },
+  {
+    "question": "What exact temperature ranges should we maintain across the riser and regenerator to achieve maximum gasoline yield?",
+    "answer": "To optimize for gasoline yield, you need to balance full feed vaporization against secondary overcracking. Target a tight Riser Outlet Temperature (ROT) window around 950°F (510°C). Running below 900°F results in poor feed vaporization, while cracking significantly above 1,000°F initiates thermal overcracking of gasoline into light / LPG gases. Maintain the regenerated catalyst temperature between 1,250°F and 1,350°F (677°C to 732°C) to supply 100% of the endothermic heat of reaction required by the riser."
+  },
+  {
+    "question": "What are the standard design parameters for reactor-stripper superficial steam velocity and catalyst flux?",
+    "answer": "To minimize the carryover of high-boiling hydrocarbons into the regenerator, the stripper must operate inside strict hydraulic windows. The reactor stripper should be designed for a steam superficial velocity of 0.75 ft/sec (0.23 m/sec). Keep the downward catalyst flux rate between 500 to 700 lbs per minute per square foot (2.4 kg to 3.4 kg per minute per square meter). Exceeding this flux rate causes the catalyst to drag down steam, decreasing its stripping efficiency."
+  },
+  {
+    "question": "What normal temperature windows define full combustion vs. low-temperature partial combustion in the regenerator?",
+    "answer": "Regeneration chemistry is strictly dictated by internal temperatures. Low-temperature partial combustion typically runs at a nominal dense bed temperature around 1,190°F (640°C), where full combustion is impossible and , CO, and  coexist in the flue gas. High-temperature full combustion targets a nominal dense bed operating window around 1,350°F (730°C) to ensure that all oxygen is consumed, leaving low carbon on the regenerated catalyst."
+  },
+  {
+    "question": "Our slide valve differential pressure () is approaching the low limit. What standard catalyst densities should we see in the standpipe?",
+    "answer": "The standpipe relies entirely on static catalyst head pressure to drive catalyst smoothly into the riser against the higher pressure zone of the reaction mix. A well-aerated, smoothly flowing standpipe must maintain a dense fluid state with a catalyst density between 35 to 45 lb/ft³ (560 to 720 kg/m³). The standpipe should be sized for a catalyst flux rate of 100 to 300 lb/sec/ft² (500 to 1,500 kg/sec/m²) of circulating catalyst."
+  },
+  {
+    "question": "What are typical normal operating pressure targets for the fractionator overhead receiver and the riser loop?",
+    "answer": "Pressure targets must balance hydraulics with downstream equipment requirements. The main fractionator overhead receiver typically operates under a low backpressure target of <15 psig (<1 bar) to safely separate vapor, liquid hydrocarbons, and condensed water. The reactor and regenerator vessels are balanced at matching operational pressure envelopes (typically between 30 to 42 psig based on blower discharge limits) to maintain positive differential pressure flow across the catalyst slide valves."
+  },
+  {
+    "question": "What is the correct field procedure for troubleshooting an unstable, erratic catalyst flow ('stick-slip') in a long standpipe?",
+    "answer": "If catalyst pressure or flow becomes erratic, the aeration balance has been disrupted. First, identify the under-performing section by monitoring pressure and temperature points along the standpipe. Ensure that the selected fluidization gas medium (air, steam, nitrogen, or fuel gas) is steadily flowing. If the line is under-aerated and packing, increase the fluidization gas flow rate along the standpipe taps in small, gradual increments. If pressure drops or fluctuates wildly, the line is over-aerated and creating gas voids; systematically decrease the aeration rate until the flowing density stabilizes back within the 35 to 45 lb/ft³ target."
+  },
+  {
+    "question": "How do we execute a formal material balance (test run) on the unit to calculate true weight closure?",
+    "answer": "To establish an accurate unit baseline, lock down unit settings for an 8 to 12-hour testing window. Upstream units must maintain a constant FCC charge rate and composition, avoiding tank switches. Collect physical liquid samples of fresh feed, raw gasoline, LCO, and decant oil concurrently with tail gas and LPG sample bombs. Calculate total coke mass flow flow using the dry air rate and flue gas metrics () via carbon-oxygen-hydrogen balance. Convert all liquid volumes to mass units () using test temperatures and °API gravities, subtract non-FCC inerts, and normalize to close between 98% to 102% weight closure. Finally, adjust gasoline and LCO yields to standard true boiling point (TBP) cut points to evaluate true unit conversion."
+  },
+  {
+    "question": "What is the correct calculation procedure for tracking metal accumulation on our equilibrium catalyst (E-cat)?",
+    "answer": "To track metals concentration relative to daily addition rates, solve for steady state mass balance using the equation: . To gauge actual nickel activity on the line, track the raw volume of molecular hydrogen generated per barrel of fresh feed, targeting a baseline of 30 to 40 scf/bbl for sweet feedstocks with low nickel contamination."
+  },
+  {
+    "question": "How do we adjust our catalyst properties if our primary target switches from maximum gasoline volume to maximizing motor octane (MON)?",
+    "answer": "To pivot your yields toward high-octane components, lower the Unit Cell Size (UCS) by transitioning toward an aluminum-deficient zeolite formulation such as dealuminated ultrastable Y (USY). Simultaneously minimize rare-earth metals on the zeolite. Fewer, more isolated active aluminum acid sites suppress secondary hydrogen-transfer reactions, which allows high-octane branched olefins to remain in the gasoline fraction instead of converting to lower-octane paraffins."
+  },
+  {
+    "question": "What is the specific sequence of chemical water wash cascading required to mitigate cyanide and bisulfide corrosion in the gas plant?",
+    "answer": "To mitigate ammonium bisulfide and cyanide corrosion without creating a corrosive internal recycle loop, use a forward cascading wash system. Continuously inject fresh condensate or stripped water into the discharge of the first-stage wet gas compressor. Allow the water to contact the hot gas and condense in the interstage cooler, scrubbing the corrosive agents. From the interstage drum, pump the captured water forward and inject it directly into the second-stage compressor discharge. Collect the final heavily-laden water phase in the High-Pressure Separator (HPS) and pressure it out to the sour water stripper. Even more FAQs: Why is reactor pressure kept slightly positive? Why is catalyst circulation measured in tonnes per hour? How do we know if afterburn is occurring inside the regenerator? Why do catalyst fines appear in slurry oil? What happens if feed contains too much nickel or vanadium? Why do we strip spent catalyst before sending it to the regenerator? How do we decide whether to increase catalyst circulation or reactor temperature? Why is the FCC called the \"heart of the refinery\"? What are the first signs that the unit is losing conversion? What is the most common reason an FCC unit needs an emergency shutdown? Why do operators closely monitor delta coke? What happens if the regenerator air blower trips? Why is the riser reactor preferred over a conventional reactor vessel? How long does a catalyst particle remain in circulation before being replaced? Why is the catalyst particle size only around 60–80 microns?"
+  }
+]
